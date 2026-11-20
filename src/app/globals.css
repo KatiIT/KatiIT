@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --space-950: #07090e;
+  --space-900: #0b0f17;
+  --neon-blue: #3b82f6;
+  --neon-orange: #f97316;
+  --neon-green: #10b981;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  background: var(--space-950);
+}
+
+body {
+  overflow-x: clip;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  background: var(--space-950);
+  color: #e6eaf2;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgb(59 130 246 / 0.4);
+}
+
+/* Dezentes PCB-Raster mit Leiterbahn-Knoten */
+.pcb-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgb(59 130 246 / 0.22) 1px, transparent 1.5px),
+    linear-gradient(to right, rgb(148 163 184 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(148 163 184 / 0.05) 1px, transparent 1px);
+  background-size: 96px 96px, 48px 48px, 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 25%, #000 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 25%, #000 20%, transparent 80%);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: #e6eaf2;
+  color: #07090e;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ── Detailseiten: Akzent über --accent / --rgb (am Seitenwurzel-Element gesetzt) ── */
+.sv-accent { color: var(--accent); }
+.sv-border { border-color: rgb(var(--rgb) / 0.35); }
+.sv-chip { border: 1px solid rgb(var(--rgb) / 0.35); background: rgb(var(--rgb) / 0.08); }
+.sv-glass {
+  background: linear-gradient(160deg, rgb(var(--rgb) / 0.09), rgb(11 15 23 / 0.8) 40%);
+  border: 1px solid rgb(var(--rgb) / 0.28);
+  box-shadow: 0 0 40px -18px rgb(var(--rgb) / 0.6), inset 0 1px 0 rgb(255 255 255 / 0.06);
+}
+.sv-pcb {
+  background-image:
+    linear-gradient(to right, rgb(var(--rgb) / 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--rgb) / 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ---- Guide-Roboter ---- */
+@keyframes guide-pop { from { opacity: 0; transform: translateY(10px) scale(.97) } to { opacity: 1; transform: none } }
+@keyframes guide-in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+@keyframes guide-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-3px) } }
+@keyframes guide-blink { 0%,100% { opacity: 1 } 50% { opacity: .2 } }
+@keyframes guide-eye { 0%,92%,100% { transform: scaleY(1) } 96% { transform: scaleY(.1) } }
+.guide-pop { animation: guide-pop .25s ease-out both }
+.guide-in { animation: guide-in .3s ease-out both }
+.guide-float { display: grid; animation: guide-float 3.2s ease-in-out infinite }
+.guide-blink { animation: guide-blink 1.4s ease-in-out infinite }
+.guide-eye { transform-box: fill-box; transform-origin: center; animation: guide-eye 4s infinite }
+[data-guide-hl] { outline: 2px solid #3B82F6; outline-offset: -2px; box-shadow: inset 0 0 60px -20px rgb(59 130 246 / .6); transition: outline-color .3s }
+@media (prefers-reduced-motion: reduce) { .guide-float, .guide-blink, .guide-eye { animation: none } .guide-pop, .guide-in { animation-duration: .01ms } }
+
+/* ── Seitenübergang: Spaltenbild ⇄ Hero-Bild (View Transitions API) ───────────────────────── */
+[data-vt-hero] { view-transition-name: svc-hero; }
+.vt-header { view-transition-name: site-header; }
+::view-transition-group(svc-hero) { animation-duration: 0.65s; animation-timing-function: cubic-bezier(0.22, 0.8, 0.2, 1); z-index: 5; }
+::view-transition-old(svc-hero),
+::view-transition-new(svc-hero) { width: 100%; height: 100%; object-fit: cover; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; }
+/* Fallback ohne Unterstützung: kurzer Fade der neuen Seite */
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+@supports not (view-transition-name: a) { .page-fade { animation: page-in 0.35s ease-out both; } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation-duration: 0.01s !important; }
+  .page-fade { animation: none !important; }
+}
