@@ -39,7 +39,7 @@ const privacy: LegalDoc = {
       heading: "1. Controller",
       paragraphs: [
         "The controller within the meaning of the General Data Protection Regulation (GDPR / DSGVO) is:",
-        "Masoud Roosta – KatiIT",
+        "Masoud Roosta– KatiIT",
         "Velsenstraße 2, 51469 - Bergisch Gladbach, Germany",
         "Email: mr@katiit.com",
         "Phone: +4915510204397",
