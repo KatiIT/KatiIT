@@ -4,38 +4,32 @@ import type { LegalDoc } from "./types";
 const address = `${site.legalName}, ${site.street}, ${site.city}, Germany`;
 
 const imprint: LegalDoc = {
-  title: "Legal notice",
-  notice:
-    "Draft with placeholders. Replace all highlighted items and have the text reviewed by a lawyer before publishing. This is not legal advice. The German version is legally binding.",
-  updated: "Last updated: [[DATE]]",
+  title: "Legal Notice (Impressum)",
   sections: [
-    { heading: "Information pursuant to § 5 DDG", paragraphs: [address] },
-    { heading: "Contact", paragraphs: [`Phone: ${site.phone}`, `Email: ${site.email}`] },
-    { heading: "VAT ID", paragraphs: [`VAT identification number pursuant to § 27a UStG: ${site.vatId}`] },
     {
-      heading: "Professional regulations",
-      paragraphs: ["[[Fill in only if applicable (chamber, professional title, supervisory authority). Otherwise remove this section.]]"],
+      heading: "Information pursuant to Section 5 DDG (German Digital Services Act)",
+      paragraphs: [],
     },
     {
-      heading: "Responsible for content pursuant to § 18 (2) MStV",
-      paragraphs: [`${site.owner}, ${site.street}, ${site.city}`],
-    },
-    {
-      heading: "Dispute resolution",
+      heading: "Provider / Responsible Party",
       paragraphs: [
-        "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board. [[Please verify this statement fits your business.]]",
+        "Masoud Roosta",
+        "Freelance IT Engineer & Consultant (KatiIT)",
+        "Velsenstraße 2",
+        "51469 - Bergisch Gladbach, Germany",
       ],
     },
     {
-      heading: "Liability for content and links",
+      heading: "Contact",
       paragraphs: [
-        "We are responsible for our own content under general law. We are not obliged to monitor third-party information transmitted or stored, and we remove infringing content promptly once we become aware of it. We have no influence on the content of linked external sites and accept no liability for it.",
+        "Email: mr@katiit.com",
+        "Phone: +4915510204397",
       ],
     },
     {
-      heading: "Copyright",
+      heading: "Nature of Activity",
       paragraphs: [
-        "Content and works created by the site operator are subject to German copyright law. Reproduction, editing and distribution require the written consent of the author.",
+        "Freelance activity in IT engineering, software development, and digital consulting (not registered in the commercial register / Handelsregister).",
       ],
     },
   ],

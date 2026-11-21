@@ -5,43 +5,31 @@ const address = `${site.legalName}, ${site.street}, ${site.city}, ${site.country
 
 const imprint: LegalDoc = {
   title: "Impressum",
-  notice:
-    "Entwurf mit Platzhaltern. Bitte alle markierten Angaben ersetzen und den Text vor Veröffentlichung rechtlich prüfen lassen. Dies ist keine Rechtsberatung.",
-  updated: "Stand: [[DATUM]]",
   sections: [
-    { heading: "Angaben gemäß § 5 DDG", paragraphs: [address] },
-    { heading: "Kontakt", paragraphs: [`Telefon: ${site.phone}`, `E-Mail: ${site.email}`] },
-    { heading: "Umsatzsteuer-ID", paragraphs: [`Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: ${site.vatId}`] },
     {
-      heading: "Berufsrechtliche Angaben",
-      paragraphs: ["[[Nur ausfüllen, falls zutreffend (Kammer, Berufsbezeichnung, Aufsichtsbehörde). Sonst Abschnitt entfernen.]]"],
+      heading: "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)",
+      paragraphs: [],
     },
     {
-      heading: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
-      paragraphs: [`${site.owner}, ${site.street}, ${site.city}`],
-    },
-    {
-      heading: "Streitbeilegung",
+      heading: "Anbieter / Verantwortlich",
       paragraphs: [
-        "Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [[Bitte prüfen, ob diese Aussage für Ihr Geschäftsmodell zutrifft.]]",
+        "Masoud Roosta",
+        "Freiberuflicher IT-Engineer & Berater (KatiIT)",
+        "Velsenstraße 2",
+        "51469 - Bergisch Gladbach, Deutschland",
       ],
     },
     {
-      heading: "Haftung für Inhalte",
+      heading: "Kontakt",
       paragraphs: [
-        "Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Bei Bekanntwerden von Rechtsverletzungen entfernen wir entsprechende Inhalte umgehend.",
+        "E-Mail: mr@katiit.com",
+        "Telefon: +4915510204397",
       ],
     },
     {
-      heading: "Haftung für Links",
+      heading: "Hinweis zur Tätigkeit",
       paragraphs: [
-        "Unser Angebot enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir keine Gewähr. Verantwortlich ist stets der jeweilige Anbieter.",
-      ],
-    },
-    {
-      heading: "Urheberrecht",
-      paragraphs: [
-        "Die durch den Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung und Verbreitung bedürfen der schriftlichen Zustimmung des Autors bzw. Erstellers.",
+        "Freiberufliche Tätigkeit im Bereich IT-Engineering, Softwareentwicklung und digitale Beratung (kein Eintrag im Handelsregister).",
       ],
     },
   ],
