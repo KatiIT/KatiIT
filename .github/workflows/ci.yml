@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
       - run: npm ci
       - run: npm run lint --if-present
@@ -30,11 +30,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Lowercase repository owner for GHCR
+        id: meta
+        run: echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: ${{ steps.meta.outputs.owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
@@ -42,7 +46,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/katiit:latest
+          tags: ghcr.io/${{ steps.meta.outputs.owner }}/katiit:latest
 
       - name: Deploy container to Oracle Ubuntu
         uses: appleboy/ssh-action@v1.2.0
@@ -51,9 +55,9 @@ jobs:
           username: ${{ secrets.ORACLE_USER }}
           key: ${{ secrets.ORACLE_SSH_KEY }}
           script: |
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            docker pull ghcr.io/${{ github.repository_owner }}/katiit:latest
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ steps.meta.outputs.owner }} --password-stdin
+            docker pull ghcr.io/${{ steps.meta.outputs.owner }}/katiit:latest
             docker stop katiit-web || true
             docker rm katiit-web || true
-            docker run -d --name katiit-web --restart unless-stopped -p 3000:3000 ghcr.io/${{ github.repository_owner }}/katiit:latest
+            docker run -d --name katiit-web --restart unless-stopped -p 3000:3000 ghcr.io/${{ steps.meta.outputs.owner }}/katiit:latest
             docker image prune -f
