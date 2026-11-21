@@ -48,7 +48,7 @@ const privacy: LegalDoc = {
     {
       heading: "2. Hosting und Server-Logfiles",
       paragraphs: [
-        "Beim Aufruf dieser Website werden durch den Hosting-Anbieter automatisch technische Daten (z. B. IP-Adresse, Datum und Uhrzeit des Abrufs, Browsertyp, Betriebssystem) in Server-Logfiles erfasst, um den sicheren und störungsfreien Betrieb der Website zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO).",
+        "Diese Website wird bei IONOS SE (Elgendorfer Str. 57, 56410 Montabaur, Deutschland) gehostet. Beim Aufruf dieser Website erfasst IONOS automatisch technische Daten (z. B. IP-Adresse, Datum und Uhrzeit des Abrufs, Browsertyp, Betriebssystem, Referrer-URL) in Server-Logfiles, um den sicheren und störungsfreien Betrieb der Website zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO). Die Server befinden sich in Rechenzentren innerhalb Deutschlands bzw. der Europäischen Union. Die Logfiles werden nach spätestens 7 bis 14 Tagen automatisch gelöscht bzw. anonymisiert.",
       ],
     },
     {
@@ -60,7 +60,7 @@ const privacy: LegalDoc = {
     {
       heading: "4. Kontaktaufnahme und Terminbuchung (Cal.com)",
       paragraphs: [
-        "Wenn Sie per E-Mail Kontakt aufnehmen oder einen Termin über Cal.com buchen, werden Ihre Angaben zur Bearbeitung der Anfrage bzw. Terminvereinbarung verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO). Die Einbindung von Cal.com erfolgt erst nach Ihrer entsprechenden Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).",
+        "Wenn Sie per E-Mail (ebenfalls über Mailserver von IONOS SE) Kontakt aufnehmen oder einen Termin über Cal.com buchen, werden Ihre Angaben zur Bearbeitung der Anfrage bzw. Terminvereinbarung verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO). Die Einbindung von Cal.com erfolgt erst nach Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ihre Anfragedaten werden gelöscht, sobald Ihr Anliegen abschließend geklärt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
       ],
     },
     {
