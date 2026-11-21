@@ -1,15 +1,10 @@
-import { site } from "@/config/site";
 import type { LegalDoc } from "./types";
-
-const address = `${site.legalName}, ${site.street}, ${site.city}, Germany`;
 
 const imprint: LegalDoc = {
   title: "Legal Notice (Impressum)",
+  notice: "Information pursuant to Section 5 DDG (German Digital Services Act).",
+  updated: "Last updated: November 2026",
   sections: [
-    {
-      heading: "Information pursuant to Section 5 DDG (German Digital Services Act)",
-      paragraphs: [],
-    },
     {
       heading: "Provider / Responsible Party",
       paragraphs: [
@@ -36,65 +31,43 @@ const imprint: LegalDoc = {
 };
 
 const privacy: LegalDoc = {
-  title: "Privacy policy",
-  notice:
-    "Draft with placeholders. Replace all highlighted items and have the text reviewed by a lawyer before publishing. This is not legal advice. The German version is legally binding.",
-  updated: "Last updated: [[DATE]]",
+  title: "Privacy Policy",
+  notice: "Privacy information pursuant to the GDPR.",
+  updated: "Last updated: November 2026",
   sections: [
     {
       heading: "1. Controller",
-      paragraphs: [`Controller within the meaning of the GDPR: ${address}. Email: ${site.email}, phone: ${site.phone}.`],
-    },
-    {
-      heading: "2. Overview",
       paragraphs: [
-        "This website sets no cookies, uses no analytics or tracking services, and loads no content from external servers unless you explicitly consent (see section 6).",
+        "The controller within the meaning of the General Data Protection Regulation (GDPR / DSGVO) is:",
+        "Masoud Roosta – KatiIT",
+        "Velsenstraße 2, 51469 - Bergisch Gladbach, Germany",
+        "Email: mr@katiit.com",
+        "Phone: +4915510204397",
       ],
     },
     {
-      heading: "3. Hosting and server log files",
+      heading: "2. Hosting and Server Log Files",
       paragraphs: [
-        `The website is operated by ${site.hosting}. When you visit, technically required data is processed: IP address, date and time, requested URL, data volume, referrer and user agent.`,
-        "The legal basis is Art. 6(1)(f) GDPR (legitimate interest in security and stable operation). Log data is deleted after [[RETENTION PERIOD, e.g. 7 days]]. A data processing agreement under Art. 28 GDPR exists with the host. [[Please confirm.]]",
+        "When you access this website, technical data (such as IP address, date and time of access, browser type, and operating system) is automatically recorded in server log files by the hosting provider to ensure the secure and reliable operation of the website (Art. 6(1)(f) GDPR).",
       ],
     },
     {
-      heading: "4. Fonts",
+      heading: "3. Self-Hosted Fonts",
       paragraphs: [
-        "The fonts Inter and JetBrains Mono are served locally from our own server. No connection is made to Google or other font providers.",
+        "This website uses locally hosted fonts (such as Inter and JetBrains Mono). No connection is made to third-party servers solely to load these fonts.",
       ],
     },
     {
-      heading: "5. Storing your privacy choice",
+      heading: "4. Contact and Appointment Booking (Cal.com)",
       paragraphs: [
-        "When you make a choice in the consent banner, we store it in your browser's local storage (key “katiit:consent:v1”). The entry contains your choice and a timestamp and is not transmitted to us or third parties.",
-        "Access is strictly necessary under § 25(2) no. 2 TDDDG to implement your decision. The legal basis is Art. 6(1)(c), (f) GDPR. You can change your choice at any time via “Privacy settings” in the footer.",
+        "If you contact us by email or book an appointment via Cal.com, your details are processed to handle your inquiry or schedule the appointment (Art. 6(1)(b) or Art. 6(1)(f) GDPR). Cal.com is only embedded after your prior consent (Art. 6(1)(a) GDPR).",
       ],
     },
     {
-      heading: "6. Appointment booking via Cal.com",
+      heading: "5. Your Rights as a Data Subject",
       paragraphs: [
-        "To book appointments you can load a Cal.com calendar. It only loads after you consent. Your IP address is transmitted to Cal.com, and Cal.com may store or read information on your device.",
-        "The legal basis is your consent under Art. 6(1)(a) GDPR and § 25(1) TDDDG. You can withdraw it at any time with effect for the future. When you book, we process the data you provide (e.g. name, email, preferred time, message) to prepare and conduct the consultation (Art. 6(1)(b) GDPR).",
-        "Provider and processing location: [[CAL.COM DETAILS PER YOUR CONTRACT, e.g. provider, EU hosting option, data processing agreement]]. Transfer to third countries (e.g. the USA) may occur. [[Verify safeguards: EU-US Data Privacy Framework or standard contractual clauses.]]",
+        "Under the GDPR, you have in particular the right of access, rectification, erasure, restriction of processing, data portability, and objection to processing (Arts. 15–21 GDPR), as well as the right to withdraw any consent given with effect for the future. You also have the right to lodge a complaint with a competent data protection supervisory authority.",
       ],
-    },
-    {
-      heading: "7. Contacting us",
-      paragraphs: [
-        "If you contact us by email, we process your details to handle the request (Art. 6(1)(b) or (f) GDPR) and delete them once the purpose lapses and no retention duties apply.",
-      ],
-    },
-    {
-      heading: "8. Your rights",
-      paragraphs: [
-        "You have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction (Art. 18), data portability (Art. 20) and to object (Art. 21 GDPR). You may withdraw consent at any time (Art. 7(3) GDPR).",
-        `You may also lodge a complaint with a supervisory authority, e.g. ${site.supervisoryAuthority}.`,
-      ],
-    },
-    {
-      heading: "9. Updates",
-      paragraphs: ["We update this policy when the website or the legal situation changes. The current version applies."],
     },
   ],
 };
