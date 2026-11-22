@@ -4,6 +4,7 @@ export const en: Dictionary = {
   benefit: {
     eyebrow: "Results",
     title: "Less Downtime. Faster Releases. Clear Architecture.",
+    note: "",
     items: [
       { value: "Zero-Downtime", label: "Unplanned Production Stops", detail: "Predictive maintenance & real-time PLC/OPC-UA telemetry" },
       { value: "< 1 Day", label: "From Commit to App Store Release", detail: "Automated Fastlane CI/CD & signed multi-platform builds" },
