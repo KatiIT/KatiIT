@@ -39,7 +39,7 @@ const privacy: LegalDoc = {
       heading: "1. Verantwortlicher",
       paragraphs: [
         "Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:",
-        "Masoud Roosta– KatiIT",
+        "Masoud Roosta – KatiIT",
         "Velsenstraße 2, 51469 - Bergisch Gladbach, Deutschland",
         "E-Mail: mr@katiit.com",
         "Telefon: +4915510204397",

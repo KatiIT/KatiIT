@@ -48,17 +48,6 @@ export function About({ dict, lang }: { dict: Dictionary["about"]; lang: Locale 
           </div>
         </div>
 
-        <div className="mt-12" role="group" aria-label={dict.refsTitle}>
-          <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-faint">{dict.refsTitle}</p>
-          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {Array.from({ length: 6 }, (_, i) => (
-              <li key={i} className="grid h-14 place-items-center rounded-xl border border-dashed border-white/15 px-2 text-center font-mono text-[11px] text-ink-faint">
-                <Ph>{dict.refPlaceholder}</Ph>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         <div className="mt-12 flex flex-col items-start justify-between gap-5 rounded-2xl border border-white/10 p-6 sm:flex-row sm:items-center sm:p-8" style={{ background: "linear-gradient(120deg, rgb(59 130 246 / .12), rgb(249 115 22 / .1), rgb(16 185 129 / .12))" }}>
           <h3 className="max-w-md text-balance text-xl font-semibold">{dict.ctaTitle}</h3>
           <a

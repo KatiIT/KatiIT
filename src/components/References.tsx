@@ -42,10 +42,12 @@ export function References({ lang }: { lang: Locale }) {
           ))}
         </ul>
 
-        <figure className="mt-6 rounded-2xl border border-white/10 bg-space-900/40 p-6">
-          <figcaption className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{t.labels.quote}</figcaption>
-          <blockquote className="mt-2 text-lg text-ink"><Ph>{t.quote}</Ph></blockquote>
-        </figure>
+        {t.quote ? (
+          <figure className="mt-6 rounded-2xl border border-white/10 bg-space-900/40 p-6">
+            <figcaption className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{t.labels.quote}</figcaption>
+            <blockquote className="mt-2 text-lg text-ink"><Ph>{t.quote}</Ph></blockquote>
+          </figure>
+        ) : null}
 
         <div className="relative mt-6 grid gap-6 overflow-hidden rounded-2xl border border-neon-green/30 bg-space-900/60 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="min-w-0">

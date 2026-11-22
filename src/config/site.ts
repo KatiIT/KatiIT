@@ -1,28 +1,22 @@
-/**
- * Zentrale Stammdaten. Alle Werte in [[doppelten eckigen Klammern]] sind PLATZHALTER
- * und werden auf der Website gelb hervorgehoben, bis sie ersetzt sind.
- */
 export const site = {
   name: "KatiIT",
   domain: "katiit.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://katiit.com",
-  owner: "[[VORNAME NACHNAME]]",
-  legalName: "[[FIRMENNAME / INHABER, ggf. RECHTSFORM]]",
-  street: "[[STRASSE HAUSNUMMER]]",
-  city: "[[PLZ ORT]]",
+  owner: "Masoud Roosta",
+  legalName: "KatiIT – Masoud Roosta",
+  street: "Velsenstraße 2",
+  city: "51469 Bergisch Gladbach",
   country: "Deutschland",
-  email: "[[KONTAKT@KATIIT.COM]]",
-  phone: "[[+49 …]]",
-  vatId: "[[USt-IdNr. gemäß § 27a UStG oder „nicht vorhanden“]]",
-  /** Cal.com: <benutzername>/<event-slug>. Per Umgebungsvariable überschreibbar. */
-  calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "[[CAL-BENUTZERNAME]]/[[EVENT-SLUG]]",
-  /** Pfad unter /public, z. B. "/images/portrait.jpg". Leer = Platzhalter. */
-  portrait: "",
-  hosting: "[[HOSTING-ANBIETER, Rechenzentrum Frankfurt am Main]]",
-  supervisoryAuthority: "[[ZUSTÄNDIGE LANDESDATENSCHUTZBEHÖRDE]]",
+  email: "mr@katiit.com",
+  phone: "+4915510204397",
+  vatId: "nicht vorhanden",
+  calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "masoud-roosta",
+  portrait: "/images/masoud-roosta.jpg",
+  hosting: "IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland",
+  supervisoryAuthority: "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)",
 } as const;
 
 export const hasPlaceholder = (value: string) => value.includes("[[");
 
-export const calUrl = `https://cal.com/${site.calLink}`;
+export const calUrl = `https://cal.com/${site.calLink.replace(/^https?:\/\/cal\.com\//i, "")}`;
 export const calEmbedUrl = `${calUrl}?embed=true&layout=month_view&theme=dark`;
