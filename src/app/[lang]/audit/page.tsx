@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Ph } from "@/components/Placeholder";
 import { CalEmbed } from "@/components/CalEmbed";
+import { site } from "@/config/site";
 import { isLocale } from "@/i18n/config";
 import { auditPages } from "@/i18n/audit-page";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -24,6 +24,7 @@ export default async function AuditPage({ params }: { params: Promise<{ lang: st
   const p = auditPages[lang];
   const dict = await getDictionary(lang);
   const card = "rounded-2xl border border-white/10 bg-space-900/60 p-5";
+  const formattedAddress = `${site.street}, ${site.city}, ${lang === "en" ? "Germany" : site.country}`;
 
   return (
     <div className="relative pb-24">
@@ -70,6 +71,36 @@ export default async function AuditPage({ params }: { params: Promise<{ lang: st
                 </section>
               ))}
             </div>
+            <section aria-labelledby="contact-t" className={card}>
+              <h2 id="contact-t" className="font-semibold">{p.contactTitle}</h2>
+              <p className="mt-2 text-sm text-ink-muted">{p.contactLead}</p>
+              <dl className="mt-4 space-y-2 text-sm text-ink-muted">
+                <div>
+                  <dt className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{p.contactLabels.provider}</dt>
+                  <dd className="text-ink">Masoud Roosta – KatiIT</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{p.contactLabels.address}</dt>
+                  <dd>{formattedAddress}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{p.contactLabels.email}</dt>
+                  <dd>
+                    <a href={`mailto:${site.email}`} className="underline underline-offset-4 hover:text-ink">
+                      {site.email}
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">{p.contactLabels.phone}</dt>
+                  <dd>
+                    <a href={`tel:${site.phone}`} className="underline underline-offset-4 hover:text-ink">
+                      {site.phone}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+            </section>
           </div>
           <section aria-labelledby="book-t" className="min-w-0">
             <h2 id="book-t" className="mb-4 text-xl font-semibold">{p.bookTitle}</h2>
@@ -93,14 +124,14 @@ export default async function AuditPage({ params }: { params: Promise<{ lang: st
                 {p.effort.rows.map((r) => (
                   <tr key={r[0]} className="border-t border-white/10">
                     <th scope="row" className="px-4 py-3 font-medium text-ink">{r[0]}</th>
-                    <td className="px-4 py-3 text-ink-muted"><Ph>{r[1]}</Ph></td>
-                    <td className="px-4 py-3 text-ink-muted"><Ph>{r[2]}</Ph></td>
+                    <td className="px-4 py-3 text-ink-muted">{r[1]}</td>
+                    <td className="px-4 py-3 text-ink-muted">{r[2]}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="mt-3 text-sm text-ink-muted"><Ph>{p.effort.note}</Ph></p>
+          <p className="mt-3 text-sm text-ink-muted">{p.effort.note}</p>
         </section>
 
         <section aria-labelledby="faq-t" className="mt-16 max-w-3xl">

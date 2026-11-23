@@ -2,7 +2,6 @@
 
 import { calEmbedUrl, calUrl, hasPlaceholder, site } from "@/config/site";
 import type { Dictionary } from "@/i18n/types";
-import { Ph } from "./Placeholder";
 import { useConsent } from "./ConsentProvider";
 
 /**
@@ -11,14 +10,18 @@ import { useConsent } from "./ConsentProvider";
  */
 export function CalEmbed({ dict }: { dict: Dictionary["audit"]["gate"] }) {
   const { calAllowed, decide, allowCalOnce, revokeCal } = useConsent();
-  const unconfigured = hasPlaceholder(site.calLink);
+  const unconfigured = !site.calLink || hasPlaceholder(site.calLink);
 
   if (calAllowed) {
     return (
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-space-900/70 backdrop-blur-xl">
         {unconfigured ? (
           <div className="p-8 text-sm text-ink-muted">
-            <Ph>{`Cal.com-Link fehlt: NEXT_PUBLIC_CAL_LINK oder site.calLink setzen ([[CAL-BENUTZERNAME]]/[[EVENT-SLUG]]).`}</Ph>
+            Cal.com is not configured yet. Please use{" "}
+            <a href={`mailto:${site.email}`} className="underline underline-offset-4 hover:text-ink">
+              {site.email}
+            </a>
+            .
           </div>
         ) : (
           <iframe
@@ -66,7 +69,7 @@ export function CalEmbed({ dict }: { dict: Dictionary["audit"]["gate"] }) {
         )}
         {dict.mail}{" "}
         <a href={`mailto:${site.email}`} className="underline underline-offset-4 hover:text-ink-muted">
-          <Ph>{site.email}</Ph>
+          {site.email}
         </a>
       </p>
     </div>
