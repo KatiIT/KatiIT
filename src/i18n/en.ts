@@ -3,12 +3,12 @@ import type { Dictionary } from "./types";
 export const en: Dictionary = {
   benefit: {
     eyebrow: "Results",
-    title: "Less Downtime. Faster Releases. Clear Architecture.",
-    note: "",
+    title: "Fewer Surprises. Faster Releases. Clear Architecture.",
+    note: "Description of typical project goals, not a guarantee. Concrete target values are agreed per project.",
     items: [
-      { value: "Zero-Downtime", label: "Unplanned Production Stops", detail: "Predictive maintenance & real-time PLC/OPC-UA telemetry" },
-      { value: "< 1 Day", label: "From Commit to App Store Release", detail: "Automated Fastlane CI/CD & signed multi-platform builds" },
-      { value: "< 30 ms", label: "Edge API Response Time (p95)", detail: "Distributed Next.js & Go/Node.js cloud architecture" },
+      { value: "Predictive", label: "Maintenance instead of unplanned stops", detail: "Predictive maintenance & real-time PLC/OPC-UA telemetry" },
+      { value: "Automated", label: "From commit to store release", detail: "Fastlane CI/CD & signed multi-platform builds" },
+      { value: "Fast", label: "Short response times at the edge", detail: "Distributed Next.js & Go/Node.js cloud architecture, targets agreed per project" },
     ],
   },
   about: {
@@ -74,7 +74,7 @@ export const en: Dictionary = {
     columns: {
       industrial: {
         index: "01",
-        short: "Your machines deliver data in real time, without downtime and without new equipment.",
+        short: "Your machines deliver data in real time, during operation and without new equipment.",
         title: "Industrial Digitalization & Mittelstand Automation",
         kicker: "Edge · OT · Analytics",
         summary:
@@ -130,6 +130,26 @@ export const en: Dictionary = {
       { title: "Architecture", text: "Target picture, security concept and a prioritized roadmap that fits your operations." },
       { title: "Delivery", text: "Incremental, testable and documented, with a clean handover to your team." },
     ],
+  },
+  engagement: {
+    eyebrow: "Working together",
+    title: "How we work together.",
+    lead: "For mid-sized companies, industrial businesses and selected clients: I solve operational bottlenecks such as legacy machines without data connectivity, web platforms that must run reliably, and mobile apps that keep working offline.",
+    audience: "You get one accountable contact, a clearly defined scope and traceable results instead of buzzwords.",
+    models: [
+      { title: "Architecture audit", text: "Compact review of systems, interfaces and risks with a written assessment and roadmap.", fit: "Good for: clarity before investing" },
+      { title: "Hourly consulting", text: "Support by the hour for architecture decisions, reviews and sparring with your team.", fit: "Good for: open or changing questions" },
+      { title: "Fixed-scope project", text: "Defined scope with an agreed proposal, change process, acceptance and handover.", fit: "Good for: clearly outlined projects" },
+      { title: "Ongoing maintenance", text: "Maintenance, updates and further development of your systems within an agreed scope.", fit: "Good for: systems in continuous operation" },
+    ],
+    stepsTitle: "The first steps",
+    steps: [
+      { title: "Discovery call", text: "15 minutes, non-binding: starting point and goals." },
+      { title: "Scope & proposal", text: "Written proposal with scope, approach and terms." },
+      { title: "Implementation", text: "Incremental, testable and documented." },
+      { title: "Handover", text: "Acceptance, documentation and access handover. Access that is no longer needed is returned or removed." },
+    ],
+    cta: "Book an intro call",
   },
   audit: {
     eyebrow: "Audit",

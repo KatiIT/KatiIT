@@ -118,7 +118,7 @@ export const guideDe: GuideData = {
       o("🔗", "Anbindung an andere Systeme", "res_backend"),
       o("📈", "Mehr Tempo und Skalierung", "res_backend"),
     ] },
-    { id: "ind", kind: "ask", text: "In der Industrie bringen wir Bestandsmaschinen in Echtzeit-Analytik, ohne Stillstand. Was ist Ihr Ziel?", options: [
+    { id: "ind", kind: "ask", text: "In der Industrie bringen wir Bestandsmaschinen in Echtzeit-Analytik, im laufenden Betrieb. Was ist Ihr Ziel?", options: [
       o("🔌", "Maschinen vernetzen", "ind_conn", "Daten verfügbar machen"),
       o("📊", "Daten auswerten", "ind_data", "Kennzahlen, Analytik"),
       o("🛠️", "Ausfälle vorhersagen", "res_pm", "Predictive Maintenance"),
@@ -158,7 +158,7 @@ export const guideDe: GuideData = {
     { id: "res_web_app", kind: "result", title: "Webanwendung / Kundenportal", text: "Für Login, Daten und Abläufe kombinieren wir ein modernes Front-End mit einem soliden Backend.", links: [L("Web & Backend ansehen", "/services/engineering#options"), L("Audit buchen", "/audit")] },
     { id: "res_backend", kind: "result", title: "Backend, APIs & Cloud", text: "Schnittstellen und Cloud-Systeme baue ich mit Node.js, Go oder Rust, je nach Anforderung als Modul-Monolith, Microservices oder Serverless.", links: [L("Architektur-Optionen ansehen", "/services/engineering#guide"), L("Audit buchen", "/audit")] },
     { id: "res_opc", kind: "result", title: "Anbindung per OPC-UA / S7", text: "Moderne Anlagen sprechen meist schon OPC-UA oder S7. Wir machen die Daten für Analytik verfügbar.", links: [L("Industrie-Seite ansehen", "/services/industrial#options"), L("Audit buchen", "/audit")] },
-    { id: "res_retrofit", kind: "result", title: "Retrofit-Gateway", text: "Ältere Maschinen binden wir über ein Gateway an, ohne die Anlage umzubauen und ohne Stillstand.", links: [L("Retrofit auf der Industrie-Seite", "/services/industrial#options"), L("Audit buchen", "/audit")] },
+    { id: "res_retrofit", kind: "result", title: "Retrofit-Gateway", text: "Ältere Maschinen binden wir über ein Gateway an, ohne die Anlage umzubauen und in Absprache mit der Produktion.", links: [L("Retrofit auf der Industrie-Seite", "/services/industrial#options"), L("Audit buchen", "/audit")] },
     { id: "res_edge", kind: "result", title: "Edge-Analytik", text: "Die Auswertung direkt an der Anlage liefert Ergebnisse in Echtzeit und funktioniert auch bei Netzausfall.", links: [L("Industrie-Seite ansehen", "/services/industrial#options"), L("Audit buchen", "/audit")] },
     { id: "res_cloud", kind: "result", title: "Cloud-Analytik", text: "In der Cloud skalieren Auswertungen und Dashboards über mehrere Standorte.", links: [L("Industrie-Seite ansehen", "/services/industrial#options"), L("Audit buchen", "/audit")] },
     { id: "res_audit_ind", kind: "result", title: "Industrie-Audit", text: "Wir sehen uns Anlagen, Schnittstellen und Ziele an und wählen dann Edge, Cloud oder beides.", links: [L("Entscheidungshilfe ansehen", "/services/industrial#guide"), L("Audit buchen", "/audit")] },
@@ -263,7 +263,7 @@ export const guideEn: GuideData = {
       o("🔗", "Connection to other systems", "res_backend"),
       o("📈", "More speed and scale", "res_backend"),
     ] },
-    { id: "ind", kind: "ask", text: "In industry we bring existing machines into real-time analytics without downtime. What is your goal?", options: [
+    { id: "ind", kind: "ask", text: "In industry we bring existing machines into real-time analytics during operation. What is your goal?", options: [
       o("🔌", "Connect machines", "ind_conn", "make data available"),
       o("📊", "Analyse data", "ind_data", "KPIs, analytics"),
       o("🛠️", "Predict failures", "res_pm", "predictive maintenance"),
@@ -303,7 +303,7 @@ export const guideEn: GuideData = {
     { id: "res_web_app", kind: "result", title: "Web application / customer portal", text: "For login, data and workflows we combine a modern front-end with a solid backend.", links: [L("See web & backend", "/services/engineering#options"), L("Book an audit", "/audit")] },
     { id: "res_backend", kind: "result", title: "Backend, APIs & cloud", text: "I build interfaces and cloud systems with Node.js, Go or Rust, as a modular monolith, microservices or serverless depending on needs.", links: [L("See architecture options", "/services/engineering#guide"), L("Book an audit", "/audit")] },
     { id: "res_opc", kind: "result", title: "Connection via OPC-UA / S7", text: "Modern machines usually speak OPC-UA or S7 already. We make the data available for analytics.", links: [L("See the industrial page", "/services/industrial#options"), L("Book an audit", "/audit")] },
-    { id: "res_retrofit", kind: "result", title: "Retrofit gateway", text: "We connect older machines through a gateway, without rebuilding the plant and without downtime.", links: [L("Retrofit on the industrial page", "/services/industrial#options"), L("Book an audit", "/audit")] },
+    { id: "res_retrofit", kind: "result", title: "Retrofit gateway", text: "We connect older machines through a gateway, without rebuilding the plant, in agreement with production.", links: [L("Retrofit on the industrial page", "/services/industrial#options"), L("Book an audit", "/audit")] },
     { id: "res_edge", kind: "result", title: "Edge analytics", text: "Analysis right at the plant gives real-time results and keeps working during network outages.", links: [L("See the industrial page", "/services/industrial#options"), L("Book an audit", "/audit")] },
     { id: "res_cloud", kind: "result", title: "Cloud analytics", text: "In the cloud, analyses and dashboards scale across several sites.", links: [L("See the industrial page", "/services/industrial#options"), L("Book an audit", "/audit")] },
     { id: "res_audit_ind", kind: "result", title: "Industrial audit", text: "We look at plants, interfaces and goals, then choose edge, cloud or both.", links: [L("See the decision guide", "/services/industrial#guide"), L("Book an audit", "/audit")] },
