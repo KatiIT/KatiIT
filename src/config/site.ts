@@ -10,7 +10,7 @@ export const site = {
   email: "mr@katiit.com",
   phone: "+4915510204397",
   vatId: "nicht vorhanden",
-  calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "katiit",
+  calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "katiit/15min",
   portrait: "/images/masoud-roosta.jpg",
   hosting: "IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland",
   supervisoryAuthority: "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)",

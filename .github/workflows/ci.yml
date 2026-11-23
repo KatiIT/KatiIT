@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_SITE_URL: https://katiit.com
-      NEXT_PUBLIC_CAL_LINK: https://cal.com
+      NEXT_PUBLIC_CAL_LINK: katiit/15min
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -52,7 +52,7 @@ jobs:
           tags: ghcr.io/${{ steps.meta.outputs.owner }}/katiit:latest
           build-args: |
             NEXT_PUBLIC_SITE_URL=https://katiit.com
-            NEXT_PUBLIC_CAL_LINK=https://cal.com
+            NEXT_PUBLIC_CAL_LINK=katiit/15min
 
       - name: Deploy container to Oracle Ubuntu
         uses: appleboy/ssh-action@v1.2.0
