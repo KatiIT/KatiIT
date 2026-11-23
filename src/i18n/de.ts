@@ -3,12 +3,12 @@ import type { Dictionary } from "./types";
 export const de: Dictionary = {
   benefit: {
     eyebrow: "Ergebnisse",
-    title: "Weniger Stillstand. Schnellere Releases. Klare Architektur.",
-    note: "",
+    title: "Weniger Überraschungen. Schnellere Releases. Klare Architektur.",
+    note: "Beschreibung typischer Projektziele, keine Garantie. Konkrete Zielwerte stimmen wir pro Projekt gemeinsam ab.",
     items: [
-      { value: "Ausfallfrei", label: "Ungeplante Stillstände", detail: "Predictive Maintenance & Echtzeit-Telemetrie über PLC/OPC-UA" },
-      { value: "< 1 Tag", label: "Vom Commit bis zum App-Store-Release", detail: "Automatisierte Fastlane-CI/CD & signierte Multi-Plattform-Builds" },
-      { value: "< 30 ms", label: "API-Antwortzeit am Edge (p95)", detail: "Verteilte Next.js- & Go-/Node.js-Cloud-Architektur" },
+      { value: "Vorausschauend", label: "Wartung statt ungeplanter Stillstände", detail: "Predictive Maintenance & Echtzeit-Telemetrie über PLC/OPC-UA" },
+      { value: "Automatisiert", label: "Vom Commit bis zum Store-Release", detail: "Fastlane-CI/CD & signierte Multi-Plattform-Builds" },
+      { value: "Schnell", label: "Kurze Antwortzeiten am Edge", detail: "Verteilte Next.js- & Go-/Node.js-Cloud-Architektur, Zielwerte pro Projekt" },
     ],
   },
   about: {
@@ -74,7 +74,7 @@ export const de: Dictionary = {
     columns: {
       industrial: {
         index: "01",
-        short: "Ihre Maschinen liefern Daten in Echtzeit, ohne Stillstand und ohne neue Anlagen.",
+        short: "Ihre Maschinen liefern Daten in Echtzeit, im laufenden Betrieb und ohne neue Anlagen.",
         title: "Industrial Digitalization & Mittelstand Automation",
         kicker: "Edge · OT · Analytics",
         summary:
@@ -130,6 +130,26 @@ export const de: Dictionary = {
       { title: "Architektur", text: "Zielbild, Sicherheitskonzept und priorisierte Roadmap, die zu Ihrem Betrieb passt." },
       { title: "Umsetzung", text: "Inkrementell, testbar und dokumentiert, mit sauberer Übergabe an Ihr Team." },
     ],
+  },
+  engagement: {
+    eyebrow: "Zusammenarbeit",
+    title: "So arbeiten wir zusammen.",
+    lead: "Für Mittelstand, Industriebetriebe und ausgewählte Kunden: Ich löse betriebliche Engpässe wie ältere Maschinen ohne Datenanbindung, Web-Plattformen, die verlässlich laufen müssen, und mobile Apps, die auch ohne Netz funktionieren.",
+    audience: "Sie bekommen einen klaren Ansprechpartner, einen abgegrenzten Umfang und nachvollziehbare Ergebnisse statt Schlagworte.",
+    models: [
+      { title: "Architektur-Audit", text: "Kompakte Bestandsaufnahme von Systemen, Schnittstellen und Risiken mit schriftlichem Befund und Roadmap.", fit: "Gut für: Klarheit vor einer Investition" },
+      { title: "Beratung nach Aufwand", text: "Stundenweise Unterstützung für Architektur-Entscheidungen, Reviews und Sparring mit Ihrem Team.", fit: "Gut für: offene oder wechselnde Fragen" },
+      { title: "Projekt mit festem Umfang", text: "Definierter Leistungsumfang mit abgestimmtem Angebot, Änderungsprozess, Abnahme und Übergabe.", fit: "Gut für: klar umrissene Vorhaben" },
+      { title: "Laufende Betreuung", text: "Wartung, Updates und Weiterentwicklung Ihrer Systeme nach vereinbartem Umfang.", fit: "Gut für: Systeme im Dauerbetrieb" },
+    ],
+    stepsTitle: "Die ersten Schritte",
+    steps: [
+      { title: "Erstgespräch", text: "15 Minuten, unverbindlich: Ausgangslage und Ziele." },
+      { title: "Umfang & Angebot", text: "Schriftlicher Vorschlag mit Umfang, Vorgehen und Konditionen." },
+      { title: "Umsetzung", text: "Inkrementell, testbar und dokumentiert." },
+      { title: "Übergabe", text: "Abnahme, Dokumentation und Zugangsübergabe. Nicht mehr benötigte Zugänge werden zurückgegeben oder entfernt." },
+    ],
+    cta: "Erstgespräch buchen",
   },
   audit: {
     eyebrow: "Audit",

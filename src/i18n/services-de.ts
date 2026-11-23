@@ -281,7 +281,7 @@ export const servicesDe: Record<"mobile" | "engineering" | "industrial", Service
     meta: { title: "Industrial Digitalization & Mittelstand Automation", description: "Bestandsmaschinen mit OPC-UA, MQTT, Kafka und Siemens S7 an Edge-Cloud-Analytik anbinden: Muster, Vor- und Nachteile, Vorgehen und Methoden." },
     hero: {
       eyebrow: "Industrial Digitalization & Mittelstand Automation",
-      title: "Bestandsmaschinen in Echtzeit-Analytik bringen, ohne Stillstand.",
+      title: "Bestandsmaschinen in Echtzeit-Analytik bringen, im laufenden Betrieb.",
       lead: "Anlagen, Steuerungen und Produktionsabläufe werden schrittweise an Edge und Cloud angebunden. Hier sehen Sie Protokolle, Integrationsmuster, ihre Vor- und Nachteile und den Weg zum Predictive-Maintenance-Dashboard. Dieser Bereich funktioniert allein und lässt sich bei Bedarf mit Web und Mobile verbinden.",
       chips: ["OPC-UA", "MQTT", "Kafka", "Siemens S7"],
       stats: ["Anbindung von Bestandsmaschinen", "Predictive Maintenance", "Digital Twins"],
@@ -404,7 +404,7 @@ export const servicesDe: Record<"mobile" | "engineering" | "industrial", Service
       title: "Methoden",
       items: [
         { title: "Nicht-invasiv", text: "Zuerst lesen, nicht schreiben. Die Steuerungslogik bleibt unangetastet." },
-        { title: "Stillstandsfrei", text: "Anbindung und Rollout laufen im laufenden Betrieb, in Absprache mit der Produktion." },
+        { title: "Im laufenden Betrieb", text: "Anbindung und Rollout werden so geplant, dass sie im laufenden Betrieb und in Absprache mit der Produktion erfolgen." },
         { title: "Security by Design", text: "Netzsegmentierung, Zertifikate und getrennte Zugriffe von Anfang an, IEC 62443 als Orientierung." },
         { title: "Einheitliches Datenmodell", text: "Maschinen aus verschiedenen Jahren und von verschiedenen Herstellern liefern vergleichbare Daten." },
         { title: "Edge-first", text: "Was lokal reagieren muss, wird lokal verarbeitet. Die Cloud bekommt verdichtete Daten." },

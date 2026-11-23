@@ -55,6 +55,16 @@ export type Dictionary = {
     columns: Record<ColumnId, ColumnCopy>;
   };
   process: { eyebrow: string; title: string; steps: { title: string; text: string }[] };
+  engagement: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    audience: string;
+    models: { title: string; text: string; fit: string }[];
+    stepsTitle: string;
+    steps: { title: string; text: string }[];
+    cta: string;
+  };
   audit: {
     eyebrow: string;
     title: string;

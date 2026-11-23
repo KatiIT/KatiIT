@@ -281,7 +281,7 @@ export const servicesEn: Record<"mobile" | "engineering" | "industrial", Service
     meta: { title: "Industrial Digitalization & Mittelstand Automation", description: "Connect legacy machines to edge-cloud analytics with OPC-UA, MQTT, Kafka and Siemens S7: patterns, pros and cons, approach and methods." },
     hero: {
       eyebrow: "Industrial Digitalization & Mittelstand Automation",
-      title: "Bring legacy machines into real-time analytics, without downtime.",
+      title: "Bring legacy machines into real-time analytics, during operation.",
       lead: "Plants, controllers and production flows are connected step by step to edge and cloud. Here are protocols, integration patterns, their pros and cons, and the path to a predictive-maintenance dashboard. This area works on its own and can be connected with web and mobile when you want that.",
       chips: ["OPC-UA", "MQTT", "Kafka", "Siemens S7"],
       stats: ["Connecting legacy machines", "Predictive maintenance", "Digital twins"],
@@ -404,7 +404,7 @@ export const servicesEn: Record<"mobile" | "engineering" | "industrial", Service
       title: "Methods",
       items: [
         { title: "Non-invasive", text: "Read first, do not write. The control logic stays untouched." },
-        { title: "Zero downtime", text: "Connection and rollout run during operation, in agreement with production." },
+        { title: "During operation", text: "Connection and rollout are planned to run during operation, in agreement with production." },
         { title: "Security by design", text: "Network segmentation, certificates and separated access from the start, with IEC 62443 as a reference." },
         { title: "Uniform data model", text: "Machines from different years and vendors deliver comparable data." },
         { title: "Edge-first", text: "What must react locally is processed locally. The cloud receives condensed data." },

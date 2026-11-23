@@ -4,6 +4,7 @@ import { AuditSection } from "@/components/AuditSection";
 import { Benefit } from "@/components/Benefit";
 import { Hero } from "@/components/Hero";
 import { References } from "@/components/References";
+import { EngagementModels } from "@/components/EngagementModels";
 import { Process } from "@/components/Process";
 import { ServiceCircuit } from "@/components/ServiceCircuit";
 import { site } from "@/config/site";
@@ -34,6 +35,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       <ServiceCircuit dict={dict.services} lang={lang} />
       <References lang={lang} />
       <Process dict={dict.process} />
+      <EngagementModels lang={lang} dict={dict.engagement} />
       <About dict={dict.about} lang={lang} />
       <AuditSection dict={dict.audit} />
     </>
