@@ -60,7 +60,7 @@ const privacy: LegalDoc = {
     {
       heading: "4. Contact and Appointment Booking (Cal.com)",
       paragraphs: [
-        "If you contact us by email (also via mail servers operated by IONOS SE) or book an appointment via Cal.com, your details are processed to handle your inquiry or schedule the appointment (Art. 6(1)(b) or Art. 6(1)(f) GDPR). Cal.com is only embedded after your explicit consent (Art. 6(1)(a) GDPR). Your inquiry data is deleted once your matter has been finally resolved and no statutory retention obligations apply.",
+        "If you contact us by email (also via mail servers operated by IONOS SE) or book an appointment via Cal.com, your details are processed to handle your inquiry or schedule the appointment (Art. 6(1)(b) or Art. 6(1)(f) GDPR). Cal.com is only embedded after your explicit consent (Art. 6(1)(a) GDPR), at which point connection data (such as your IP address and request metadata) is transmitted to Cal.com. Your inquiry data is deleted once your matter has been finally resolved and no statutory retention obligations apply.",
       ],
     },
     {

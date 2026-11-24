@@ -11,7 +11,7 @@ const imprint: LegalDoc = {
         "Masoud Roosta",
         "Freiberuflicher IT-Engineer & Berater (KatiIT)",
         "Velsenstraße 2",
-        "51469 - Bergisch Gladbach, Deutschland",
+        "51469 Bergisch Gladbach, Deutschland",
       ],
     },
     {
@@ -60,7 +60,7 @@ const privacy: LegalDoc = {
     {
       heading: "4. Kontaktaufnahme und Terminbuchung (Cal.com)",
       paragraphs: [
-        "Wenn Sie per E-Mail (ebenfalls über Mailserver von IONOS SE) Kontakt aufnehmen oder einen Termin über Cal.com buchen, werden Ihre Angaben zur Bearbeitung der Anfrage bzw. Terminvereinbarung verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO). Die Einbindung von Cal.com erfolgt erst nach Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ihre Anfragedaten werden gelöscht, sobald Ihr Anliegen abschließend geklärt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+        "Wenn Sie per E-Mail (ebenfalls über Mailserver von IONOS SE) Kontakt aufnehmen oder einen Termin über Cal.com buchen, werden Ihre Angaben zur Bearbeitung der Anfrage bzw. Terminvereinbarung verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO). Die Einbindung von Cal.com erfolgt erst nach Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); dabei werden Verbindungsdaten (insbesondere Ihre IP-Adresse sowie Browser-/Anfragedaten) an Cal.com übertragen. Ihre Anfragedaten werden gelöscht, sobald Ihr Anliegen abschließend geklärt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
       ],
     },
     {
